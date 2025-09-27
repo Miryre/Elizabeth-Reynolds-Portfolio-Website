@@ -9,7 +9,6 @@
 <body>
 
     <!-- Navigation Bar -->
-
     <div class="topnav">
         <a class="active" href="#home">Home</a>
         <div class="topnav-right">
@@ -17,58 +16,64 @@
           <a href="#projects">Projects</a>
           <a href="#contact">Contact</a>
           <a href="#blog">Blog</a>
-          </div>
         </div>
-        
-       <!--Hero Section-->
-        <section class="hero" id="home">
-            <div class="hero-container">
-                <div class="hero-content">
-                    <h1>Elizabeth Reynolds</h1>
-                    <h2>UX/UI Designer | Full Stack Developer</h2>
-                    <p>Creating beautiful, functional web experiences with modern technology.</p>
-                    <div class="hero-buttons">
-                        <a href="#projects" class="btn">View My Work</a>
-                        <a href="#contact" class="btn btn-secondary">Get In Touch</a>
-                    </div>
-                </div>
-                <div class="hero-image">
-                    <div class="image-placeholder">
-                      <span>My Photo Here</span>  
-                    </div>
+    </div>
+    
+    <!--Hero Section-->
+    <section class="hero" id="home">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1>Elizabeth Reynolds</h1>
+                <h2>UX/UI Designer | Full Stack Developer</h2>
+                <p>Creating beautiful, functional web experiences with modern technology.</p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn">View My Work</a>
+                    <a href="#contact" class="btn btn-secondary">Get In Touch</a>
                 </div>
             </div>
-        </section>
-
-  <!-- About Me Section -->
-
-    <section id="about" class="about-section">
-        <div class="about-container">
-            <h2>About Me</h2>
-             <p id="welcome-message" style="color: white; text-shadow: 02px 4px rgba(0,0,0,0.3);">Hi! Welcome to my page. I am a newly certified Fullstack Developer and this is the beginning of my journey to creating a powerful portfolio.</p> 
-   
-   
-        <h3>My Core Skills</h3>
-        <ul>
-            <li><strong>Frontend</strong> HTML, CSS, Javascript</li>
-            <li><strong>Backend</strong> Python, Flask (Learning Django)</li>
-            <li><strong>Design</strong> Adobe Creative Suite</li>
-        </ul>
-    <button onclick='changeMessage()'>Click for a surprise!</button>
-    </div>
+            <div class="hero-image">
+                <div class="image-placeholder">
+                  <span>My Photo Here</span>  
+                </div>
+            </div>
+        </div>
     </section>
 
-    <section id="projects" style="min-height: 400px; padding: 2rem 0;">
+    <!-- About Me Section -->
+    <section id="about" class="about-section">
+        <div class="container">  
+            <h2>About Me</h2>
+            <p id="welcome-message" style="color: white; text-shadow: 0 2px 4px rgba(0,0,0,0.3);">Hi! Welcome to my page. I am a newly certified Fullstack Developer and this is the beginning of my journey to creating a powerful portfolio.</p> 
+   
+            <h3>My Core Skills</h3>
+            <ul>
+                <li><strong>Frontend</strong> HTML, CSS, Javascript</li>
+                <li><strong>Backend</strong> Python, Flask (Learning Django)</li>
+                <li><strong>Design</strong> Adobe Creative Suite</li>
+            </ul>
+            <button onclick='changeMessage()'>Click for a surprise!</button>
+        </div>
+    </section>
+
+    <section id="projects">
         <div class="container">
             <h2>My Projects</h2>
             <p>Projects section coming soon!</p>
         </div>
     </section>
 
-    <section id="contact" style="min-height: 400px; padding: 2rem 0;">
+    <section id="contact">
         <div class="container">
-            <h2>Let's Connect</h2>
+            <h2>Contact</h2>
             <p>Contact section coming soon!</p>
+        </div>
+    </section>
+
+   
+    <section id="blog">
+        <div class="container">
+            <h2>Blog</h2>
+            <p>Blog section coming soon!</p>
         </div>
     </section>
 
@@ -76,9 +81,31 @@
     function changeMessage() {
         const messageElement = document.getElementById('welcome-message');
         messageElement.textContent = 'Thank you for visiting! I am currently building amazing projects. Stay tuned!';
-        messageElement.style.color = '#ffeb3b'; //Let's add some style too!
-        messageElement.style.textShadow = '2px 4px rgba(0,0,0,0.5)';
+        messageElement.style.color = '#ffeb3b';
+        messageElement.style.textShadow = '0 2px 4px rgba(0,0,0,0.5)';  <!-- Fixed: Added missing 0 -->
     }
+
+    window.addEventListener('scroll', function() {
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('.topnav a');
+
+        let current = '';
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop - 100;
+            const sectionBottom = sectionTop + section.offsetHeight;
+
+            if (scrollY >= sectionTop && scrollY < sectionBottom) {
+                current = section.getAttribute('id');
+            }
+        });
+
+        navLinks.forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href') === `#${current}`) {
+                link.classList.add('active');
+            }
+        });
+    });
     </script>
 </body>
 </html>

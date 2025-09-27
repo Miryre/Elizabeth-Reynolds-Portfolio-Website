@@ -4,17 +4,20 @@
     --text-color: white;
 }
 
-
-
 body {
     font-family: 'Arial', sans-serif;
-    color: white;
-    width: auto;
-    margin: 0 auto; /* This one line centers the entire page */
-    padding: 20px;
-    background: linear-gradient(180deg, #667eea 0%, #764ba2 100%);
+    margin: 0;
+    padding-top: 80px; /* ADDED: Prevent content hiding behind fixed nav */
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     min-height: 100vh;
 }
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px; 
+}
+
 
 h1 {
     color: white;
@@ -60,12 +63,15 @@ button:hover{
 }
 
 .topnav {
+    position: fixed;
+    top:0;
+    width: 100%;
+    z-index: 1000;
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
     padding: 1rem 20px;
     margin-bottom: 2rem;
-    width: 100%;
     box-sizing: border-box;
     display: flex;
     justify-content: space-between;
@@ -96,22 +102,30 @@ button:hover{
     gap: 1.5rem;
 }
 
-.hero {
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(5px);
-    border-radius: 20px;
-    padding: 4rem 2rem;
-    margin: 2rem auto;
-    max-width: 1000px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+.topnav a.active {
+    background: rgba(0, 0, 0, 0.2); 
+    color: white; 
+    border: 1px solid rgba(101, 126, 234, 0.5);
 }
+
+.hero {
+    background: rgba(0, 0, 0, 0.2); /* Darker background for contrast */
+    backdrop-filter: blur(10px);
+    padding: 6rem 2rem;
+    margin: 2rem 0;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    width: 100%;
+    box-sizing: border-box;
+    position: relative; /* For potential overlay effects */
+}
+
 
 .hero-container {
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 3rem;
-    max-width: 800px;
+    max-width: 1200px;
     margin: 0 auto;
 }
 
@@ -201,7 +215,3 @@ section {
     padding: 3rem 0;
 }
  
-.nav-link.active {
-    background: rgba(184, 42, 168, 0.3);
-    color: #ffebeb;
-}
