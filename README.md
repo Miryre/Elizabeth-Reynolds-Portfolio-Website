@@ -15,7 +15,7 @@ A modern, responsive portfolio website built with HTML, CSS, and JavaScript.
 - Git version control
 
 ## Live Demo
-[Add your live link here when you deploy it]
+Coming Soon......
 
 ## Ongoing Development
 This portfolio is actively being developed with daily commits.
