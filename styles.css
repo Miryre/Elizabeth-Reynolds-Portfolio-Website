@@ -192,3 +192,16 @@ button:hover{
     color: rgba(255, 255, 255, 0.7);
     font-style: italic;
 }
+
+html {
+    scroll-behavior: smooth;
+}
+
+section {
+    padding: 3rem 0;
+}
+ 
+.nav-link.active {
+    background: rgba(184, 42, 168, 0.3);
+    color: #ffebeb;
+}
