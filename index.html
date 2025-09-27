@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Vanilla Developer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+
+    <div class="topnav">
+        <a class="active" href="#home">Home</a>
+        <div class="topnav-right">
+          <a href="#about">About</a>
+          <a href="#portfolio">My Portfolio</a>
+          <a href="#contact">Contact</a>
+          <a href="#blog">Blog</a>
+          </div>
+        </div>
+        
+       <!--Hero Section-->
+        <section class="hero">
+            <div class="hero-container">
+                <div class="hero-content">
+                    <h1>Elizabeth Reynolds</h1>
+                    <h2>UX/UI Designer | Full Stack Developer</h2>
+                    <p>Creating beautiful, functional web experiences with modern technology.</p>
+                    <div class="hero-buttons">
+                        <a href="#projects" class="btn">View My Work</a>
+                        <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="image-placeholder">
+                      <span>My Photo Here</span>  
+                    </div>
+                </div>
+            </div>
+        </section>
+
+  <div class="container">  
+   <!-- <h1>Elizabeth Reynolds | Full Stack Developer</h1>
+        <p id="welcome-message" style="color: white; text-shadow: 02px 4px rgba(0,0,0,0.3);">Hi! Welcome to my page. I am a newly certified Fullstack Developer and this is the beginning of my journey to creating a powerful portfolio.</p> -->
+   
+   
+        <h2>My Core Skills</h2>
+        <ul>
+            <li><strong>Frontend</strong> HTML, CSS, Javascript</li>
+            <li><strong>Backend</strong> Python, Flask (Learning Django)</li>
+            <li><strong>Design</strong> Adobe Creative Suite</li>
+        </ul>
+    <button onclick='changeMessage()'>Click for a surprise!</button>
+    </div>
+
+    <script>
+    function changeMessage() {
+        const messageElement = document.getElementById('welcome-message');
+        messageElement.textContent = 'Thank you for visiting! I am currently building amazing projects. Stay tuned!';
+        messageElement.style.color = '#ffeb3b'; //Let's add some style too!
+        messageElement.style.textShadow = '2px 4px rgba(0,0,0,0.5)';
+    }
+    </script>
+</body>
+</html>
