@@ -260,56 +260,60 @@
     </div>
 </section>
     
-<!--Contact Section-->
-
-    <section id="contact">
-        <div class="container">
-            <h2>Get In Touch</h2>
-            <p>Have a project in mind or want to collaborate? I'd love to hear from you!</p>
-
-            <div class="contact-content">
-                <div class="contact-info">
-                    <h3>Let's Connect</h3>
-                    <div class="contact-item">
-                        <strong>Email</strong>
-                        <p>thevanilladeveloper@icloud.com</p>
+<!-- Contact Section -->
+<section id="contact">
+    <div class="container">
+        <h2>Get In Touch</h2>
+        <p class="section-subtitle">Have a project in mind or want to collaborate? I'd love to hear from you!</p>
+        
+        <div class="contact-content">
+            <form class="contact-form" id="contactForm">
+                <div class="contact-header">
+                    <div class="contact-details">
+                        <div class="contact-detail">
+                            <strong>Email</strong>
+                            <p>thevanilladeveloper@icloud.com</p>
+                        </div>
+                        <div class="contact-detail">
+                            <strong>Location</strong>
+                            <p>Available for remote work worldwide</p>
+                        </div>
+                        <div class="contact-detail">
+                            <strong>Response Time</strong>
+                            <p>Usually within 24 hours</p>
+                        </div>
                     </div>
-                    <div class="contact-item">
-                        <strong>Location</strong>
-                        <p>Available for remote work worldwide.</p>
-                    </div>
-            </div>
-                    <div class="contact-item">
-                        <strong>Response TIme</strong>
-                        <p>Usually within 48 hours</p>
-                    </div>
-                 </div>
-<!--Contact Form-->
-                 <form class="contact-form" id="contact-form">
-                    <div class="form-group">
-                        <label for="name">Name *</label>
-                        <input type="text" id="name" name='name' required>
-                        <span class="error-message" id="name-error"></span>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email *</label>
-                        <input type="email" id="email" name='email' required>
-                        <span class="error-message" id="name-error"></span>
-                    </div>
-                    <div class="form-group">
-                        <label for="name">Subject</label>
-                        <input type="text" id="subject" name="subject">
-                    </div>
-                    <div class="form-group">
-                        <label for="name">Message *</label>
-                        <textarea id="message" name="message" rows="5" required></textarea>
-                    </div>
-
-                    <button type="submit" class="btn btn-primary">Send Message</button>
-                    <div class="form-status" id="formStatus"></div>
-                 </form>
+                </div>
+                
+                <div class="form-group">
+                    <label for="name">Name *</label>
+                    <input type="text" id="name" name="name" required>
+                    <span class="error-message" id="nameError"></span>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email *</label>
+                    <input type="email" id="email" name="email" required>
+                    <span class="error-message" id="emailError"></span>
+                </div>
+                
+                <div class="form-group">
+                    <label for="subject">Subject</label>
+                    <input type="text" id="subject" name="subject">
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">Message *</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                    <span class="error-message" id="messageError"></span>
+                </div>
+                
+                <button type="submit" class="btn btn-primary">Send Message</button>
+                <div class="form-status" id="formStatus"></div>
+            </form>
         </div>
-    </section>
+    </div>
+</section>
 
    
     <section id="blog">

@@ -7,7 +7,7 @@
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
-    padding-top: 80px; /* ADDED: Prevent content hiding behind fixed nav */
+    padding-top: 80px;
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     min-height: 100vh;
 }
@@ -18,33 +18,29 @@ body {
     padding: 0 20px; 
 }
 
-
 h1 {
     color: white;
     text-align: center;
     border-bottom: 2px solid rgba(255, 255, 255, 0.3);
     padding-bottom: 10px;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-
 }
 
 h2 {
     color: white;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-
 }
 
 ul {
-    background-color: rgba(255, 255, 255 ,0.05);
+    background-color: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(10px);
     color: white;
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-
 }
 
-button{
+button {
     background-color: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.3);
@@ -52,11 +48,11 @@ button{
     border-radius: 8px;
     cursor: pointer;
     font-size: 16px;
-    padding:12px 24px;
+    padding: 12px 24px;
     transition: background-color 0.3s ease;
 }
 
-button:hover{
+button:hover {
     background-color: rgba(255, 255, 255, 0.3);
     transform: translateY(-2px);
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
@@ -64,7 +60,7 @@ button:hover{
 
 .topnav {
     position: fixed;
-    top:0;
+    top: 0;
     width: 100%;
     z-index: 1000;
     background: rgba(255, 255, 255, 0.1);
@@ -103,22 +99,21 @@ button:hover{
 }
 
 .topnav a.active {
-    background: rgba(0, 0, 0, 0.2); 
-    color: white; 
+    background: rgba(0, 0, 0, 0.2);
+    color: white;
     border: 1px solid rgba(101, 126, 234, 0.5);
 }
 
 .hero {
-    background: rgba(0, 0, 0, 0.2); /* Darker background for contrast */
+    background: rgba(0, 0, 0, 0.2);
     backdrop-filter: blur(10px);
     padding: 6rem 2rem;
     margin: 2rem 0;
     border: 1px solid rgba(255, 255, 255, 0.1);
     width: 100%;
     box-sizing: border-box;
-    position: relative; /* For potential overlay effects */
+    position: relative;
 }
-
 
 .hero-container {
     display: flex;
@@ -130,7 +125,7 @@ button:hover{
 }
 
 .hero-content {
-    flex:1;
+    flex: 1;
 }
 
 .hero h1 {
@@ -145,7 +140,6 @@ button:hover{
     font-size: 1.5rem;
     margin: 0 0 1rem 0;
     font-weight: normal;
-
 }
 
 .hero p {
@@ -160,7 +154,7 @@ button:hover{
     gap: 1rem;
 }
 
-.btn{
+.btn {
     padding: 12px 24px;
     border-radius: 8px;
     text-decoration: none;
@@ -214,15 +208,13 @@ html {
 section {
     padding: 3rem 0;
 }
- 
-/*Footer Styles*/
 
 .footer {
     background: rgba(0, 0, 0, 0.2);
     backdrop-filter: blur(10px);
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     padding: 2rem 0;
-    margin-top: 3rem
+    margin-top: 3rem;
 }
 
 .footer-content {
@@ -273,7 +265,6 @@ section {
     font-size: 1.1rem;
 }
 
-/* Projects Grid */
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -281,7 +272,6 @@ section {
     margin-top: 2rem;
 }
 
-/* Project Cards */
 .project-card {
     background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(10px);
@@ -323,7 +313,6 @@ section {
     color: rgba(255, 255, 255, 0.9);
     font-size: 1.1rem;
     font-weight: bold;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
     z-index: 1;
     background: rgba(0, 0, 0, 0.2);
     padding: 0.5rem 1rem;
@@ -331,6 +320,7 @@ section {
     backdrop-filter: blur(5px);
     border: 1px solid rgba(255, 255, 255, 0.1);
 }
+
 .project-content {
     padding: 1.5rem;
 }
@@ -347,7 +337,6 @@ section {
     margin-bottom: 1.5rem;
 }
 
-/* Technology Tags */
 .tech-tags {
     display: flex;
     flex-wrap: wrap;
@@ -364,7 +353,6 @@ section {
     border: 1px solid rgba(184, 42, 168, 0.5);
 }
 
-/* Project Links */
 .project-links {
     display: flex;
     justify-content: space-between;
@@ -401,7 +389,6 @@ section {
     margin-top: 2rem;
 }
 
-/* UX Project Cards */
 .ux-project-card {
     background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(10px);
@@ -442,7 +429,6 @@ section {
     color: rgba(255, 255, 255, 0.9);
     font-size: 1.1rem;
     font-weight: bold;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
     z-index: 1;
     background: rgba(0, 0, 0, 0.2);
     padding: 0.8rem 1.5rem;
@@ -467,7 +453,6 @@ section {
     margin-bottom: 1.5rem;
 }
 
-/* Design Process */
 .design-process h4 {
     color: rgba(255, 255, 255, 0.9);
     margin: 0 0 0.5rem 0;
@@ -490,7 +475,6 @@ section {
     border: 1px solid rgba(101, 126, 234, 0.5);
 }
 
-/* Design Tools */
 .design-tools {
     display: flex;
     flex-wrap: wrap;
@@ -513,59 +497,63 @@ section {
 }
 
 .contact-content {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    gap: 3rem;
+    display: block; /* Change from grid to block layout */
     margin-top: 2rem;
 }
 
-/* Contact Info */
 .contact-info {
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 15px;
-    padding: 2rem;
-    height: fit-content;
+    display: none; /* Hide the separate contact info box */
 }
 
-.contact-info h3 {
-    color: #ffeb3b;
-    margin-bottom: 1.5rem;
-    font-size: 1.3rem;
-}
-
-.contact-item {
-    margin-bottom: 1.5rem;
-}
-
-.contact-item strong {
-    color: rgba(255, 255, 255, 0.9);
-    display: block;
-    margin-bottom: 0.5rem;
-}
-
-.contact-item p {
-    color: rgba(255, 255, 255, 0.7);
-    margin: 0;
-}
-
-/* Contact Form */
+/* Contact Form - now full width */
 .contact-form {
     background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 15px;
     padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
+/* Add contact info at the top of the form */
+.contact-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.contact-details {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.contact-detail {
+    text-align: center;
+}
+
+.contact-detail strong {
+    color: #ffeb3b;
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.contact-detail p {
+    color: rgba(255, 255, 255, 0.8);
+    margin: 0;
+}
+
+/* Rest of the form styles remain the same */
 .form-group {
     margin-bottom: 1.5rem;
 }
 
 .form-group label {
     display: block;
-    color: rgba(255, 255, 255, 0.9);
+    color: white;
     margin-bottom: 0.5rem;
     font-weight: bold;
 }
@@ -598,6 +586,7 @@ section {
 .form-group textarea {
     resize: vertical;
     min-height: 120px;
+    font-family: 'Arial', sans-serif;
 }
 
 .error-message {
@@ -625,4 +614,11 @@ section {
     background: rgba(244, 67, 54, 0.2);
     color: #f44336;
     border: 1px solid rgba(244, 67, 54, 0.3);
+}
+
+.contact-form .btn-primary {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.1rem;
+    margin-top: 0.5rem;
 }
