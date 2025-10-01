@@ -357,14 +357,16 @@
     document.getElementById('contactForm').addEventListener('submit', function(e) {
         e.preventDefault();
 
-        const name = document.getElementByID('name');
-        const email = document.getElementByID('email');
-        const message = document.getElementByID('message');
-        const formStatus = document.getElementByID('formStatus');
+        console.log('Form submission intercepted for validation.');
+
+        const name = document.getElementById('name');
+        const email = document.getElementById('email');
+        const message = document.getElementById('message');
+        const formStatus = document.getElementById('formStatus');
 
         let isValid = true;
 // error message reset
-        document.querySelectorAll('error-message').forEach(error => {
+        document.querySelectorAll('.error-message').forEach(error => {
             error.textContent = '';
         });
 
@@ -376,13 +378,19 @@
         // Email validation
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (!email.value.trim()) {
-            document .getElementById('emailError').text.Content = 'Email is required.';
+            document.getElementById('emailError').textContent = 'Email is required.';
+            isValid = false;
         }else if (!emailRegex.test(email.value)) {
             document.getElementById('emailError').textContent = 'Please enter a valid email address.';
             isValid = false;
         }
 
         //message validation
+
+        if (!message.value.trim()) {
+        document.getElementById('messageError').textContent = 'Message is required.';
+        isValid = false;
+    }
         if (isValid) {
             formStatus.textContent = 'Thank you for your message! I will get back to you soon.';
             formStatus.className = 'form-status success';
@@ -393,9 +401,9 @@
             setTimeout(()=> {
                 formStatus.textContent = '';
                 formStatus.className = 'form-status';
-            }, 5000),
-        }, else {
-            formStatus.textContent = 'Pleae fix the above errors.';
+            }, 5000);
+        }else {
+            formStatus.textContent = 'Please fix the above errors.';
             formStatus.className = 'form-status error';
         }
             });
