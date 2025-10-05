@@ -11,13 +11,16 @@
     <!-- Navigation Bar -->
     <div class="topnav">
         <a class="active" href="#home">Home</a>
-        <div class="topnav-right">
+        <div class="topnav-right" id="myTopnav">
           <a href="#about">About</a>
           <a href="#ux-ui">UX/UI</a>
           <a href="#codedprojects">Coded Projects</a>
           <a href="#contact">Contact</a>
           <a href="#blog">Blog</a>
         </div>
+        <a href="javascript:void(0);" class="icon" onclick="toggleNav()">
+           <span>&#9776;</span>
+           </a>
     </div>
     
     <!--Hero Section-->
@@ -407,6 +410,13 @@
             formStatus.className = 'form-status error';
         }
             });
+
+// Hamburger menu toggle
+
+function toggleNav() {
+    const nav = document.getElementById('myTopnav');
+    nav.classList.toggle('active');
+}
         
     </script>
 
