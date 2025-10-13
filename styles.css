@@ -203,8 +203,8 @@ button:hover {
 
 
 .profile-image {
-    width: 200px;
-    height: 200px;
+    width: 500px;
+    height: 500px;
     border-radius: 50%;
     border: 3px solid rgba(255, 255, 255, 0.3);
     object-fit: cover;
