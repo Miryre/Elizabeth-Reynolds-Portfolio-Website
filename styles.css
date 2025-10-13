@@ -188,7 +188,7 @@ button:hover {
     flex: 0 0 200px;
 }
 
-.image-placeholder {
+/* .image-placeholder {
     width: 200px;
     height: 200px;
     background: rgba(255, 255, 255, 0.1);
@@ -199,6 +199,23 @@ button:hover {
     border: 3px solid rgba(255, 255, 255, 0.2);
     color: rgba(255, 255, 255, 0.7);
     font-style: italic;
+} */
+
+
+.profile-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    object-fit: cover;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 033s ease;
+}
+
+
+.profile-image:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
 }
 
 html {
